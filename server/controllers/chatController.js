@@ -1,3 +1,4 @@
+const { isCareerRelated } = require("../utils/careerFilter")
 const Chat = require("../models/Chat")
 
 // Create new chat
@@ -50,6 +51,10 @@ const addMessage = async (req, res) => {
   try {
     const { content, role } = req.body
 
+    if (!content || !role) {
+      return res.status(400).json({ message: "Role and content required" })
+    }
+
     const chat = await Chat.findOne({
       _id: req.params.chatId,
       user: req.user._id
@@ -59,15 +64,32 @@ const addMessage = async (req, res) => {
       return res.status(404).json({ message: "Chat not found" })
     }
 
+    // If NOT career related
+    if (role === "user" && !isCareerRelated(content)) {
+
+      const fallbackMessage =
+        "I'm here to help with your career journey! Ask me about resumes, interviews, or career paths."
+
+      chat.messages.push({
+        role: "assistant",
+        content: fallbackMessage
+      })
+
+      await chat.save()
+      return res.status(200).json(chat)
+    }
+
+    // If career related → store user message
     chat.messages.push({
       role,
       content
     })
 
     await chat.save()
-
     res.status(200).json(chat)
+
   } catch (error) {
+    console.error("Add Message Error:", error)
     res.status(500).json({ message: "Failed to add message" })
   }
 }
