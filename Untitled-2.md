@@ -1,0 +1,25 @@
+```
+└── 📁client
+    └── 📁public
+        ├── vite.svg
+    └── 📁src
+        └── 📁assets
+            ├── react.svg
+        └── 📁components
+        └── 📁context
+        └── 📁pages
+        └── 📁services
+        └── 📁utils
+        ├── App.css
+        ├── App.jsx
+        ├── index.css
+        ├── main.jsx
+    ├── .env
+    ├── .gitignore
+    ├── eslint.config.js
+    ├── index.html
+    ├── package-lock.json
+    ├── package.json
+    ├── README.md
+    └── vite.config.js
+```

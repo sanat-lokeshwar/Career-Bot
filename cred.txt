@@ -1,0 +1,24 @@
+careerbotUser
+dp758GlVTHKHQwzi
+new:DeoZJXVp1m3LrjXK
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDyJO3FqwZWPVBHT0i8eBu9z5SjJBwoQaA",
+  authDomain: "career-bot-2005.firebaseapp.com",
+  projectId: "career-bot-2005",
+  storageBucket: "career-bot-2005.firebasestorage.app",
+  messagingSenderId: "899855512210",
+  appId: "1:899855512210:web:4d694b322cfd58adafac4b",
+  measurementId: "G-CB1NXK3GXV"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);

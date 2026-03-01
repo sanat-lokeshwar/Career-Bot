@@ -1,0 +1,35 @@
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f172a;
+}
+
+.login-card {
+  background-color: #1e293b;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  width: 350px;
+}
+
+.login-card h1 {
+  margin-bottom: 10px;
+}
+
+.login-card button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-card button:hover {
+  background-color: #2563eb;
+}
