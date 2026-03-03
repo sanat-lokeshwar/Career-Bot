@@ -1,47 +1,59 @@
-# CareerBot 🚀
+# 🚀 CareerBot – AI Career Assistant (MERN + Groq)
 
-CareerBot is a MERN Stack AI-powered career assistant built for college placement preparation.
+CareerBot is a full-stack AI-powered career guidance chatbot built using the MERN stack with Firebase Authentication and Groq (LLaMA3) integration.
 
-## 🔥 Features (Planned)
+It provides secure multi-session chat functionality with intelligent career filtering and modern ChatGPT-style UI.
 
-- Google Authentication (Firebase)
-- Separate chat sessions per user
-- Career-focused AI responses (Gemini API)
-- Chat history sidebar
-- Dark / Light mode
-- Typing animation
+---
+
+## 🔥 Features
+
+### 🔐 Authentication
+- Firebase Google Authentication
+- Backend token verification
+- Protected routes with middleware
+- Secure session handling
+
+### 💬 Smart Multi-Chat System
+- Create, switch, and delete chats
+- Automatic chat title generation
+- Smart login behavior:
+  - Reuses empty chats
+  - Never auto-opens chats with messages
+  - Prevents duplicate empty chats
+
+### 🤖 AI Integration
+- Groq (LLaMA3 model)
+- Career-only question filtering
+- Fallback for non-career queries
+- Markdown-formatted responses
+
+### 🎨 Modern UI (React + CSS)
+- ChatGPT-style layout
+- Animated typing indicator
+- Auto-scroll behavior
 - Career Tip of the Day
-- Deployed on Render
+- Dark / Light mode (persistent)
+- Clean responsive layout
 
-## 🛠 Tech Stack
+---
 
-Frontend:
+## 🏗 Tech Stack
 
+### Frontend
 - React (Vite)
+- Normal CSS (No Tailwind)
 - Axios
-- Firebase Authentication
+- React Router
+- React Markdown
 
-Backend:
-
+### Backend
 - Node.js
 - Express
 - MongoDB Atlas
-- Mongoose
-- Gemini API
+- Firebase Admin SDK
+- Groq API (LLaMA3)
 
-Database Structure:
+---
 
-- Users collection
-- Chats collection (separate per user)
-
-## 📁 Project Structure
-
-CareerBot/
-│
-├── client/ (React Frontend)
-└── server/ (Node + Express Backend)
-
-## 🚧 Status
-
-Environment setup completed.
-Backend + Database integration in progress.
+## 📂 Project Structure
