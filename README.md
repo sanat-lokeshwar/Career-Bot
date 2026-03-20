@@ -57,3 +57,55 @@ It provides secure multi-session chat functionality with intelligent career filt
 ---
 
 ## 📂 Project Structure
+```
+└── 📁client
+    └── 📁public
+        ├── vite.svg
+    └── 📁src
+        └── 📁assets
+        └── 📁components
+        └── 📁context
+        └── 📁pages
+            ├── Login.css
+            ├── Login.jsx
+        └── 📁services
+            ├── firebase.js
+        └── 📁utils
+        ├── App.jsx
+        ├── main.jsx
+    ├── .env
+    ├── eslint.config.js
+    ├── index.html
+    ├── package-lock.json
+    ├── package.json
+    └── vite.config.js
+```
+
+
+```
+└── 📁server
+    └── 📁config
+        ├── db.js
+        ├── firebase.js
+    └── 📁controllers
+        ├── authController.js
+        ├── chatController.js
+    └── 📁firebase
+        ├── serviceAccountKey.json
+    └── 📁middleware
+        ├── authMiddleware.js
+    └── 📁models
+        ├── Chat.js
+        ├── User.js
+    └── 📁routes
+        ├── authRoutes.js
+        ├── chatRoutes.js
+    └── 📁services
+        ├── groqService.js
+    └── 📁utils
+        ├── careerFilter.js
+    ├── .env
+    ├── package-lock.json
+    ├── package.json
+    └── server.js
+```
